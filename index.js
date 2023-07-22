@@ -2,6 +2,7 @@ require("dotenv").config()
 const fetch = require("node-fetch");
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 let agentStreams = [];
 
@@ -40,7 +41,7 @@ setInterval(() => loadData(), 500);
 
 app.get("/", (req, res) => res.send("data on /streams"))
 
-app.get("/streams", async (req, res) => {
+app.get("/streams", cors(), async (req, res) => {
     return res.json(agentStreams)
 })
 
