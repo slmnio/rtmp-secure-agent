@@ -24,7 +24,7 @@ async function loadData() {
             "audio",
             "clients",
             "frames",
-            "kpbs",
+            "kbps",
             "publish",
             "recv_bytes",
             "send_bytes",
